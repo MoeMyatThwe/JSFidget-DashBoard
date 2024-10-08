@@ -1,0 +1,502 @@
+/* General styling for the body */
+body {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.2em;
+    background-color: #575a84;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+/* Container styles for Flexbox layout */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Header styling */
+h1 {
+    color: #faf4f4;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+/* Widget container */
+.widget {
+    background-color: white;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    align-self: flex-start;
+}
+
+/* Circumference Program */
+#Circumference-widget {
+    background-color: #e0f7fa;
+}
+
+#Circumference-myH1 {
+    font-size: 1.5em;
+}
+
+#Circumference-myText, #Circumference-mySubmit {
+    font-size: 1.2em;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Counter Program */
+#CounterProgram-widget {
+    background-color: #ffebee;
+}
+
+#CounterProgram-countLabel {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.CounterProgram-buttons {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: black;
+    background-color: beige;
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.25s ease-in-out;
+}
+
+.CounterProgram-buttons:hover {
+    background-color: #ffccbc;
+}
+
+/* Random Number Program */
+
+.dice-image {
+    width: 100%; /* Responsive image */
+    max-width: 250px; /* Limit image size */
+    margin: 20px 0; /* Space above and below the image */
+    border-radius: 10px; /* Rounded corners */
+    
+}
+
+.dice-roll {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+#RandomNumber-widget {
+    background-color: #f3e5f5;
+}
+
+#RandomNumber-myButton {
+    
+    font-size: 1.2em;
+    padding: 10px 25px;
+    background-color: #e1bee7;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#RandomNumber-myButton:hover {
+    background-color: #ce93d8;
+}
+
+.RandomNumber-myLabels {
+    font-size: 2em;
+    margin: 10px 0;
+}
+
+/* Check Age Widget */
+#CheckAge-widget {
+    background-color: #ffe0b2;
+}
+
+#CheckAge-myText {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+#CheckAge-mySubmit {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: white;
+    background-color: #ff7043;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    margin-top: 10px;
+}
+
+#CheckAge-mySubmit:hover {
+    background-color: #ff5722;
+}
+
+#CheckAge-resultElement {
+    font-size: 1.5em;
+    margin-top: 15px;
+    color: #d32f2f;
+}
+
+/* Check State Widget */
+#CheckState-widget {
+    background-color: #c8e6c9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#CheckState-myCheckBox, input[type="radio"] {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+label {
+    font-size: 1.2em;
+    color: #333;
+}
+
+#CheckState-mySubmit {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: white;
+    background-color: #388e3c;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#CheckState-mySubmit:hover {
+    background-color: #2e7d32;
+}
+
+#subResult, #paymentResult {
+    font-size: 1.5em;
+    color: #1b5e20;
+    margin-top: 10px;
+}
+
+.radio-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-left: 150px;
+    
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 10px;
+}
+
+.radio-group label {
+    font-size: 1.2em;
+}
+
+
+/* Number Guessing Game Widget */
+
+#NumberGuess-widget {
+    background-color: #a0a9bd;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    position: relative; /* Allows absolute positioning of children */
+}
+
+.guess-image {
+    width: 100%;  /* Adjusts to the width of the widget */
+    max-width: 300px; /* Prevents image from being too large */
+    margin: 20px 0; /* Adds space above and below the image */
+    border-radius: 10px; /* Rounds the corners of the image */
+}
+
+#guessInput {
+    padding: 10px;
+    font-size: 1.2em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: block;
+    width: 100%;
+    max-width: 200px; 
+    margin-left: auto;
+    margin-right: auto; /* Center input box */
+}
+
+#guessSubmit {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: white;
+    background-color: #bfbd36;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    display: block;
+    margin-left: auto; /* Center button */
+    margin-right: auto;
+}
+
+#guessSubmit:hover {
+    background-color: #94922a;
+}
+
+#guessFeedback {
+    font-size: 1.3em;
+    color: #d32f2f;
+    margin-top: 10px;
+}
+
+#attemptsDisplay {
+    font-size: 1.2em;
+    color: #00796b;
+    margin-top: 5px;
+}
+
+/* Calculator Widget */
+#Calculator-widget {
+    background-color: #424242;
+    color: white;
+}
+
+#calculator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#calc-display {
+    width: 90%;
+    max-width: 400px;
+    height: 50px;
+    font-size: 2em;
+    margin-bottom: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    text-align: right;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.calc-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+}
+
+.calc-button {
+    padding: 20px;
+    font-size: 1.5em;
+    background-color: #616161;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.calc-button:hover {
+    background-color: #757575;
+}
+
+.operator {
+    background-color: #bc8634; /* Orange color for operators */
+    color: white;
+}
+
+.operator:hover {
+    background-color: #8b6428; /* Darker shade on hover */
+}
+
+/* Temperature Converter Widget */
+#TemperatureConverter-widget {
+    background-color: #fdf2e3; 
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    margin: 20px auto;
+    max-width: 500px; /* Consistent width */
+    text-align: center;
+}
+
+.temperature_converter_Form {
+    text-align: center;
+    max-width: 350px;
+    margin: auto;
+}
+
+.temperature-h1{
+    color: #FF7043;
+}
+
+#TemperatureConverter-textBox {
+    width: 50%;
+    text-align: center;
+    font-size: 2em;
+    border: 2px solid hsla(0, 0%, 0%, 0.8);
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+label {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+button {
+    margin-top: 15px;
+    background-color: rgb(247, 179, 95);
+    color: white;
+    font-size: 1.5em;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(248, 167, 68);
+}
+
+#TemperatureConverter-result {
+    font-size: 1.75em;
+    font-weight: bold;
+}
+
+/* Dice Roller Widget*/
+#DiceRoller-widget {
+    background-color: #FFF9C4; /* Soft yellow background */
+}
+
+#DiceRoller-myH1 {
+    font-size: 1.5em;
+    color: #0000ff;
+}
+
+.DiceRoller-label {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+.DiceRoller-input {
+    font-size: 1.2em;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+#DiceRoller-myButton {
+    font-size: 1.2em;
+    padding: 10px 25px;
+    background-color: #0000ff;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#DiceRoller-myButton:hover {
+    background-color: #0000ff;
+}
+
+.DiceRoller-result {
+    font-size: 1.3em;
+    color: #0000ff;
+    margin-top: 15px;
+}
+
+.DiceRoller-images {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.DiceRoller-images img {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+}
+
+/* password generator */
+#PasswordGenerator-widget {
+    background-color: #f5f5f5;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 500px;
+    text-align: center;
+}
+
+#PasswordGenerator-widget h2 {
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+#PasswordGenerator-widget input[type="number"] {
+    padding: 10px;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100px;
+}
+
+#PasswordGenerator-widget input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+#PasswordGenerator-widget label {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+#generatePassword {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: white;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#generatePassword:hover {
+    background-color: #45a049;
+}
+
+#generatedPassword {
+    padding: 10px;
+    font-size: 1.2em;
+    margin-top: 10px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+#PasswordGenerator-widget .passwordGenerator-H2{
+    color: #45a049;
+}

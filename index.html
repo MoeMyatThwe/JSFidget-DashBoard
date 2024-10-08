@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSFidget Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <audio id="jumpSound" src="assets/jump_sound.wav" preload="auto"></audio>
+
+</head>
+<body>
+
+    <h1>JSFidget Dashboard</h1>
+
+    <div class="container">
+    <!-- Circumference Widget -->
+    <div class="widget" id="Circumference-widget">
+        <h2 id="Circumference-myH1">Enter the radius of a circle:</h2>
+        <label for="Circumference-myText">Radius: </label>
+        <input type="text" id="Circumference-myText"><br><br>
+        <button id="Circumference-mySubmit">Submit</button>
+        <h3 id="Circumference-myH3"></h3>
+    </div>
+
+    <!-- Counter Program Widget -->
+    <div class="widget" id="CounterProgram-widget">
+        <h2>Counter Program</h2>
+        <label id="CounterProgram-countLabel">0</label><br>
+        <div id="CounterProgram-btnContainer">
+            <button id="CounterProgram-decreaseBtn" class="CounterProgram-buttons">Decrease</button>
+            <button id="CounterProgram-resetBtn" class="CounterProgram-buttons">Reset</button>
+            <button id="CounterProgram-increaseBtn" class="CounterProgram-buttons">Increase</button>
+        </div>
+    </div>
+
+    <!-- Random Number Widget -->
+    <div class="widget" id="RandomNumber-widget">
+        <h2>Roll 3 dices!</h2>
+        <div class="dice-roll">
+        <img src="https://media.giphy.com/media/7JzIg2js3i66EZ0W2G/giphy.gif?cid=ecf05e47lyoyc7hw1otr9c1ecvxbz0k10w5v3yt02ru79d8l&ep=v1_gifs_search&rid=giphy.gif&ct=g" alt="Rolling Dice" class="dice-image">
+        <button id="RandomNumber-myButton">Roll</button><br>
+        </div>
+        <label id="RandomNumber-myLabel1" class="RandomNumber-myLabels"></label><br>
+        <label id="RandomNumber-myLabel2" class="RandomNumber-myLabels"></label><br>
+        <label id="RandomNumber-myLabel3" class="RandomNumber-myLabels"></label><br>
+    </div>
+
+    <!-- Check age -->
+    <div class="widget" id="CheckAge-widget">
+        <h2>Age Verification</h2>
+        <label>Enter your age:</label><br><br>
+        <input type="text" id="CheckAge-myText"><br>
+        <button type="submit" id="CheckAge-mySubmit">Submit</button><br>
+        <p id="CheckAge-resultElement"></p>
+    </div>
+
+    <!-- Check State -->
+<div class="widget" id="CheckState-widget">
+    <h2>Check Subscription and Payment Method</h2>
+
+    <input type="checkbox" id="CheckState-myCheckBox">
+    <label for="CheckState-myCheckBox">Subscribe</label><br><br>
+
+<div class="radio-group">
+    <input type="radio" id="visaBtn" name="card">
+    <label for="visaBtn">Visa</label>
+</div>
+<div class="radio-group">
+    <input type="radio" id="masterCardBtn" name="card">
+    <label for="masterCardBtn">MasterCard</label>
+</div>
+<div class="radio-group">
+    <input type="radio" id="payPalBtn" name="card">
+    <label for="payPalBtn">PayPal</label>
+</div>
+
+    <button type="submit" id="CheckState-mySubmit">Submit</button>
+
+    <p id="subResult"></p>
+    <p id="paymentResult"></p>
+</div>
+
+<!-- Number Guessing Game Widget -->
+<div class="widget" id="NumberGuess-widget">
+    <h2>Guess the Number!</h2>
+    <img src="assets/guess-the-number.png" alt="Guess the Number" class="guess-image">
+    <p>Guess a number between <span id="min-number">50</span> and <span id="max-number">100</span></p>
+    
+    <input type="number" id="guessInput" placeholder="Enter your guess" min="50" max="100">
+    <button id="guessSubmit">Submit Guess</button>
+    
+    <p id="guessFeedback"></p>
+    <p id="attemptsDisplay">Attempts: 0</p>
+</div>
+
+
+<!-- Calculator Widget -->
+<div class="widget" id="Calculator-widget">
+    <h2>Calculator</h2>
+    <div id="calculator">
+        <input type="text" id="calc-display" disabled>
+        <div class="calc-buttons">
+            <button class="calc-button operator" onclick="clearDisplay()">AC</button>
+            <button class="calc-button operator" onclick="appendToDisplay('/')">÷</button>
+            <button class="calc-button operator" onclick="appendToDisplay('*')">×</button>
+            <button class="calc-button operator" onclick="appendToDisplay('-')">-</button>
+            <button class="calc-button" onclick="appendToDisplay('7')">7</button>
+            <button class="calc-button" onclick="appendToDisplay('8')">8</button>
+            <button class="calc-button" onclick="appendToDisplay('9')">9</button>
+            <button class="calc-button operator" onclick="appendToDisplay('+')">+</button>
+            <button class="calc-button" onclick="appendToDisplay('4')">4</button>
+            <button class="calc-button" onclick="appendToDisplay('5')">5</button>
+            <button class="calc-button" onclick="appendToDisplay('6')">6</button>
+            <button class="calc-button" onclick="appendToDisplay('1')">1</button>
+            <button class="calc-button" onclick="appendToDisplay('2')">2</button>
+            <button class="calc-button" onclick="appendToDisplay('3')">3</button>
+            <button class="calc-button" onclick="appendToDisplay('0')">0</button>
+            <button class="calc-button" onclick="appendToDisplay('.')">.</button>
+            <button class="calc-button operator" onclick="calculateResult(); playSound(); ">=</button>
+        </div>
+    </div>
+</div>
+
+<!-- Temperature Converter Widget -->
+<div id="TemperatureConverter-widget" class="widget">
+    <form class="temperature_converter_Form">
+        <h2 class="temperature-h1">Temperature Conversion </h2>
+        <h1>⛅</h1>
+        <br>
+    
+        <input type="number" id="TemperatureConverter-textBox" value="0"><br>
+
+        <input type="radio" id="toFahrenheit" name="unit">
+        <label for="toFahrenheit">Celsius ➪ Fahrenheit</label><br>
+
+        <input type="radio" id="toCelsius" name="unit">
+        <label for="toCelsius">Fahrenheit ➪ Celsius</label><br>
+
+        <button type="button" onclick="convert(); playSound(); ">Submit</button>
+        <p id="TemperatureConverter-result"></p>
+    </form>
+</div>
+
+<!-- Dice Roller Widget -->
+<div id="DiceRoller-widget" class="widget">
+    <h1 id="DiceRoller-myH1">Dice Roller</h1>
+    <label for="numOfDice" class="DiceRoller-label"># of dice:</label>
+    <input type="number" id="DiceRoller-numOfDice" value="1" min="1" class="DiceRoller-input"><br>
+    <button id="DiceRoller-myButton" onclick="rollDice(); playSound(); ">Roll Dice</button>
+    <div id="DiceRoller-diceResult" class="DiceRoller-result"></div>
+    <div id="DiceRoller-diceImages" class="DiceRoller-images"></div>
+</div>
+
+<!-- Password Generator Widget -->
+<div id="PasswordGenerator-widget" class="widget">
+    <h2 class="passwordGenerator-H2">Password Generator</h2>
+
+    <div>
+        <label for="passwordLength">Password Length:</label>
+        <input type="number" id="passwordLength" min="4" max="20" value="12" />
+    </div>
+
+    <div>
+        <input type="checkbox" id="includeLowercase" />
+        <label for="includeLowercase">Include Lowercase</label>
+    </div>
+
+    <div>
+        <input type="checkbox" id="includeUppercase" />
+        <label for="includeUppercase">Include Uppercase</label>
+    </div>
+
+    <div>
+        <input type="checkbox" id="includeNumbers" />
+        <label for="includeNumbers">Include Numbers</label>
+    </div>
+
+    <div>
+        <input type="checkbox" id="includeSymbols" />
+        <label for="includeSymbols">Include Symbols</label>
+    </div>
+
+    <button id="generatePassword">Generate Password</button><br><br>
+
+    <div>
+        <label for="generatedPassword">Generated Password:</label>
+        <input type="text" id="generatedPassword" readonly />
+    </div>
+</div>
+
+
+
+
+
+
+
+
+</div>
+    <script src="index.js"></script>
+</body>
+</html>
